@@ -10,7 +10,8 @@ module.exports = function (context, request) {
 
   if (request.query && request.query.id) {
     const id = parseInt(request.query.id);
-    const planet = planets.filter(p => p.id === id);
+    const match = planets.filter(p => p.id === id);
+    const planet = match.length ? match[0] : {};
     response = {
       body: planet
     };

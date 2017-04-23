@@ -10,7 +10,8 @@ module.exports = function (context, request) {
 
   if (request.query && request.query.id) {
     const id = parseInt(request.query.id);
-    const film = films.filter(f => f.id === id);
+    const match = films.filter(f => f.id === id);
+    const film = match.length ? match[0] : {};
     response = {
       body: film
     };

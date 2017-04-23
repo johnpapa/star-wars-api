@@ -10,7 +10,8 @@ module.exports = function (context, request) {
 
   if (request.query && request.query.id) {
     const id = parseInt(request.query.id);
-    const person = people.filter(p => p.id === id);
+    const match = people.filter(p => p.id === id);
+    const person = match.length ? match[0] : {};
     response = {
       body: person
     };
