@@ -697,6 +697,11 @@ const people = [
 
 ];
 
+const data = {
+  count: people.length,
+  results: people
+}
+
 function getPeople() {
-  return people;
+  return data;
 }

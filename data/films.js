@@ -16,6 +16,11 @@ const films = [
   new Film(10, 'Rogue One')
 ];
 
+const data = {
+  count: films.length,
+  results: films
+}
+
 function getFilms() {
-  return films;
+  return data;
 }
