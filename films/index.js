@@ -5,12 +5,12 @@ module.exports = function (context, request) {
 
   let filmService = require('../data/films');
   let data = filmService.getFilms();
-  let films = data.results.filter(c => c.id === id);
+  let films = data.results;
   let response = {};
 
   if (request.query && request.query.id) {
     const id = parseInt(request.query.id);
-    const film = films.filter(c => c.id === id);
+    const film = films.filter(f => f.id === id);
     response = {
       body: film
     };
