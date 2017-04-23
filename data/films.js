@@ -19,7 +19,7 @@ const films = [
 const data = {
   count: films.length,
   results: films
-}
+};
 
 function getFilms() {
   return data;

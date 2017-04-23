@@ -393,7 +393,7 @@ const planets = [
 const data = {
   count: planets.length,
   results: planets
-}
+};
 
 function getPlanets() {
   return data;

@@ -3,13 +3,14 @@ module.exports = function (context, request) {
   context.log('Bindings', context.bindings);
   context.log('Request', request);
 
-  let filmData = require('../data/film');
-  let film = filmData.getFilm();
+  let filmService = require('../data/films');
+  let data = filmService.getFilms();
+  let films = data.results.filter(c => c.id === id);
   let response = {};
 
   if (request.query && request.query.id) {
     const id = parseInt(request.query.id);
-    const person = film.filter(c => c.id === id);
+    const film = films.filter(c => c.id === id);
     response = {
       body: film
     };
