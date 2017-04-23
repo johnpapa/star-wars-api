@@ -1,0 +1,127 @@
+  {
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "appName": {
+        "type": "string"
+      },
+      "location": {
+        "type": "string",
+        "allowedValues": [
+          "Brazil South",
+          "East US",
+          "East US 2",
+          "Central US",
+          "North Central US",
+          "South Central US",
+          "West US",
+          "West US 2"
+        ],
+        "defaultValue": "[resourceGroup().location]"
+      },
+      "storageAccountName": {
+        "type": "string",
+        "maxLength": 24
+      },
+      "storageAccountType": {
+        "type": "string",
+        "allowedValues": [
+          "Standard_LRS",
+          "Standard_GRS",
+          "Standard_ZRS",
+          "Premium_LRS"
+        ]
+      },
+      "repoURL": {
+        "type": "string"
+      },
+      "branch": {
+        "type": "string",
+        "defaultValue": "master"
+      }
+    },
+    "variables": {
+      "appServicePlanName": "[parameters('appName')]",
+      "storageAccountName": "[toLower(parameters('storageAccountName'))]",
+      "storageAccountType": "[parameters('storageAccountType')]",
+      "storageAccountid": "[concat(resourceGroup().id,'/providers/','Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
+      "storageLocation": "[parameters('location')]",
+      "siteName": "[parameters('appName')]"
+    },
+    "resources": [
+      {
+        "type": "Microsoft.Storage/storageAccounts",
+        "name": "[variables('storageAccountName')]",
+        "apiVersion": "2015-05-01-preview",
+        "location": "[variables('storageLocation')]",
+        "properties": {
+          "accountType": "[variables('storageAccountType')]"
+        }
+      },
+      {
+        "apiVersion": "2015-08-01",
+        "name": "[variables('appServicePlanName')]",
+        "type": "Microsoft.Web/serverfarms",
+        "location": "[variables('storageLocation')]",
+        "sku": {
+          "name": "Y1",
+          "tier": "Dynamic",
+          "size": "Y1",
+          "family": "Y",
+          "capacity": 0
+        },
+        "properties": {
+          "name": "[variables('appServicePlanName')]",
+          "numberOfWorkers": 0
+        }
+      },
+      {
+        "apiVersion": "2015-08-01",
+        "name": "[variables('siteName')]",
+        "type": "Microsoft.Web/sites",
+        "kind": "functionapp",
+        "location": "[variables('storageLocation')]",
+        "dependsOn": [
+          "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]",
+          "[resourceId('Microsoft.Web/serverfarms', variables('siteName'))]"
+        ],
+        "properties": {
+          "serverFarmId": "[variables('appServicePlanName')]",
+          "alwaysOn": true
+        },
+        "resources": [
+          {
+            "apiVersion": "2015-08-01",
+            "name": "appsettings",
+            "type": "config",
+            "dependsOn": [
+              "[resourceId('Microsoft.Web/Sites', variables('siteName'))]",
+              "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+            ],
+            "properties": {
+              "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listKeys(variables('storageAccountid'),'2015-05-01-preview').key1)]",
+              "AzureWebJobsDashboard": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listKeys(variables('storageAccountid'),'2015-05-01-preview').key1)]",
+              "FUNCTIONS_EXTENSION_VERSION": "~1",
+              "WEBSITE_CONTENTSHARE" : "[toLower(variables('siteName'))]",
+              "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING" : "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listKeys(variables('storageAccountid'),'2015-05-01-preview').key1)]",
+              "WEBSITE_NODE_DEFAULT_VERSION" : "6.5.0"
+            }
+          },
+          {
+            "apiVersion": "2015-04-01",
+            "name": "web",
+            "type": "sourcecontrols",
+            "dependsOn": [
+              "[resourceId('Microsoft.Web/Sites', variables('siteName'))]",
+              "[concat('Microsoft.Web/Sites/', variables('siteName'), '/config/appsettings')]"
+            ],
+            "properties": {
+              "repoUrl": "[parameters('repoURL')]",
+              "branch": "[parameters('branch')]",
+              "IsManualIntegration": true
+            }
+          }
+        ]
+      }
+    ]
+  }
