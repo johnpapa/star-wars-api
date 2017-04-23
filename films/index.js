@@ -17,7 +17,7 @@ module.exports = function (context, request) {
   }
   else {
     response = {
-      body: films
+      body: data
     };
   }
   context.done(null, response);

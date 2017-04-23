@@ -17,7 +17,7 @@ module.exports = function (context, request) {
   }
   else {
     response = {
-      body: people
+      body: data
     };
   }
   context.done(null, response);
