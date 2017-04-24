@@ -5,685 +5,93 @@ module.exports = {
 }
 
 const people = [
-  new Person(0, 'Luke Skywalker', 1),
-  // [ // films
-  //   5,
-  //   3,
-  //   6,
-  //   4,
-  //   7
-  // ],
-  // 'vehicles': [
-  //   'http://swapi.co/api/vehicles/14/',
-  //   'http://swapi.co/api/vehicles/30/'
-  // ],
-  // 'starships': [
-  //   'http://swapi.co/api/starships/12/',
-  //   'http://swapi.co/api/starships/22/'
-  // ]
-  new Person(0, 'C-3PO', 1),
-  // [ // films
-  //   5,
-  //   2,
-  //   1,
-  //   3,
-  //   6,
-  //   4
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'R2-D2', 8),
-  // [ // films
-  //   5,
-  //   2,
-  //   1,
-  //   3,
-  //   6,
-  //   4,
-  //   7
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Darth Vader', 1),
-  // [ // films
-  //   5,
-  //   3,
-  //   6,
-  //   4
-  // ],
-  // 'vehicles': [],
-  // 'starships': [
-  //   'http://swapi.co/api/starships/13/'
-  // ],
-  new Person(0, 'Leia Organa', 2),
-  // [ // films
-  //   5,
-  //   3,
-  //   6,
-  //   4,
-  //   7
-  // ],
-  // 'vehicles': [
-  //   'http://swapi.co/api/vehicles/30/'
-  // ],
-  // 'starships': [],
-  new Person(0, 'Owen Lars', 1),
-  // [ // films
-  //   2,
-  //   3,
-  //   4
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Beru Whitesun lars', 1),
-  // [ // films
-  //   2,
-  //   3,
-  //   4
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'R5-D4', 1),
-  // [ // films
-  //   4
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Biggs Darklighter', 1),
-  // [ // films
-  //   4
-  // ],
-  // 'vehicles': [],
-  // 'starships': [
-  // 'http://swapi.co/api/starships/12/'
-  // ],
-  new Person(0, 'Obi-Wan Kenobi', 20),
-  // [ // films
-  //   5,
-  //   2,
-  //   1,
-  //   3,
-  //   6,
-  //   4
-  // ],
-  // 'vehicles': [
-  //   'http://swapi.co/api/vehicles/38/'
-  // ],
-  // 'starships': [
-  //   'http://swapi.co/api/starships/48/',
-  //   'http://swapi.co/api/starships/59/',
-  //   'http://swapi.co/api/starships/64/',
-  //   'http://swapi.co/api/starships/65/',
-  //   'http://swapi.co/api/starships/74/'
-  // ],
-  new Person(0, 'Anakin Skywalker', 1),
-  // [ // films
-  //   2,
-  //   1,
-  //   3
-  // ],
-  // 'vehicles': [
-  //   'http://swapi.co/api/vehicles/44/',
-  //   'http://swapi.co/api/vehicles/46/'
-  // ],
-  // // 'starships': [
-  //   'http://swapi.co/api/starships/59/',
-  //   'http://swapi.co/api/starships/65/',
-  //   'http://swapi.co/api/starships/39/'
-  // ],
-  new Person(0, 'Wilhuff Tarkin', 21),
-  // [ // films
-  //   3,
-  //   4
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Chewbacca', 14),
-  // [ // films
-  //   5,
-  //   3,
-  //   6,
-  //   4,
-  //   7
-  // ],
-  // 'vehicles': [
-  //   'http://swapi.co/api/vehicles/19/'
-  // ],
-  // // 'starships': [
-  //   'http://swapi.co/api/starships/10/',
-  //   'http://swapi.co/api/starships/22/'
-  // ],
-  new Person(0, 'Han Solo', 22),
-  // [ // films
-  //   5,
-  //   6,
-  //   4,
-  //   7
-  // ],
-  // // 'vehicles': [],
-  // // 'starships': [
-  //   'http://swapi.co/api/starships/10/',
-  //   'http://swapi.co/api/starships/22/'
-  // ],
-  new Person(0, 'Greedo', 23),
-  // [ // films
-  //   4
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Jabba Desilijic Tiure', 24),
-  // [ // films
-  //   1,
-  //   6,
-  //   4
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Wedge Antilles', 22),
-  // [ // films
-  //   5,
-  //   6,
-  //   4
-  // ],
-  // 'vehicles': [
-  //   'http://swapi.co/api/vehicles/14/'
-  // ],
-  // // 'starships': [
-  //   'http://swapi.co/api/starships/12/'
-  // ],
-  new Person(0, 'Jek Tono Porkins', 26),
-  // [ // films
-  //   4
-  // ],
-  // 'vehicles': [],
-  // 'starships': [
-  //   'http://swapi.co/api/starships/12/'
-  // ],
-  new Person(0, 'Yoda', 28),
-  // [ // films
-  //   5,
-  //   2,
-  //   1,
-  //   3,
-  //   6
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Palpatine', 8),
-  // [ // films
-  //   5,
-  //   2,
-  //   1,
-  //   3,
-  //   6
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Boba Fett', 10),
-  // [ // films
-  //   5,
-  //   2,
-  //   6
-  // ],
-  // 'vehicles': [],
-  // 'starships': [
-  //   'http://swapi.co/api/starships/21/'
-  // ],
-  new Person(0, 'IG-88', 28),
-  // [ // films
-  //   5
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Bossk', 29),
-  // [ // films
-  //   5
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Lando Calrissian', 30),
-  // [ // films
-  //   5,
-  //   6
-  // ],
-  // 'vehicles': [],
-  // 'starships': [
-  //   'http://swapi.co/api/starships/10/'
-  // ],
-  new Person(0, 'Lobot', 6),
-  // [ // films
-  //   5
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Ackbar', 31),
-  // [ // films
-  //   6,
-  //   7
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Mon Mothma', 32),
-  // [ // films
-  //   6
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Arvel Crynyd', 28),
-  // [ // films
-  //   6
-  // ],
-  // 'vehicles': [],
-  // 'starships': [
-  // 'http://swapi.co/api/starships/28/'
-  // ],
-  new Person(0, 'Wicket Systri Warrick', 7),
-  // [ // films
-  //   6
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Nien Nunb', 33),
-  // [ // films
-  //   6
-  // ],
-  // 'vehicles': [],
-  // 'starships': [
-  //   'http://swapi.co/api/starships/10/'
-  // ],
-  new Person(0, 'Qui-Gon Jinn', 28),
-  // [ // films
-  //   1
-  // ],
-  // 'vehicles': [
-  //   'http://swapi.co/api/vehicles/38/'
-  // ],
-  // 'starships': [],
-  new Person(0, 'Nute Gunray', 18),
-  // [ // films
-  //   2,
-  //   1,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Finis Valorum', 9),
-  // [ // films
-  //   1
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Jar Jar Binks', 8),
-  // [ // films
-  //   2,
-  //   1
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Roos Tarpals', 8),
-  // [ // films
-  //   1
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Rugor Nass', 8),
-  // [ // films
-  //   1
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Ric Olié', 8),
-  // [ // films
-  //   1
-  // ],
-  //   'http://swapi.co/api/starships/40/'
-  // ],
-  new Person(0, 'Watto', 34),
-  // [ // films
-  //   2,
-  //   1
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Sebulba', 35),
-  // [ // films
-  //   1
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Quarsh Panaka', 8),
-  // [ // films
-  //   1
-  // ],
-  new Person(0, 'Shmi Skywalker', 1),
-  // [ // films
-  //   2,
-  //   1
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Darth Maul', 36),
-  // [ // films
-  //   1
-  // ],
-  // 'vehicles': [
-  //   'http://swapi.co/api/vehicles/42/'
-  // ],
-  // // 'starships': [
-  //   'http://swapi.co/api/starships/41/'
-  // ],
-  new Person(0, 'Bib Fortuna', 37),
-  // [ // films
-  //   6
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Ayla Secura', 37),
-  // [ // films
-  //   2,
-  //   1,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Dud Bolt', 39),
-  // [ // films
-  //   1
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Gasgano', 40),
-  // [ // films
-  //   1
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Ben Quadinaros', 41),
-  // [ // films
-  //   1
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Mace Windu', 42),
-  // [ // films
-  //   2,
-  //   1,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Ki-Adi-Mundi', 43),
-  // [ // films
-  //   2,
-  //   1,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Kit Fisto', 44),
-  // [ // films
-  //   2,
-  //   1,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Eeth Koth', 45),
-  // [ // films
-  //   1,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Adi Gallia', 9),
-  // [ // films
-  //   1,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Saesee Tiin', 47),
-  // [ // films
-  //   1,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Yarael Poof', 48),
-  // [ // films
-  //   1
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Plo Koon', 49),
-  // [ // films
-  //   2,
-  //   1,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [
-  //   'http://swapi.co/api/starships/48/'
-  // ],
-  new Person(0, 'Mas Amedda', 50),
-  // [ // films
-  //   2,
-  //   1
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Gregar Typho', 8),
-  // [ // films
-  //   2
-  // ],
-  // 'vehicles': [],
-  // 'starships': [
-  //   'http://swapi.co/api/starships/39/'
-  // ],
-  new Person(0, 'Cordé', 8),
-  // [ // films
-  //   2
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Cliegg Lars', 1),
-  // [ // films
-  //   2
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Poggle the Lesser', 11),
-  // [ // films
-  //   2,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Luminara Unduli', 51),
-  // [ // films
-  //   2,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Barriss Offee', 51),
-  // [ // films
-  //   2
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Dormé', 8),
-  // [ // films
-  //   2
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Dooku', 52),
-  // [ // films
-  //   2,
-  //   3
-  // ],
-  // 'vehicles': [
-  //   'http://swapi.co/api/vehicles/55/'
-  // ],
-  // 'starships': [],
-  new Person(0, 'Bail Prestor Organa', 2),
-  // [ // films
-  //   2,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Jango Fett', 53),
-  // [ // films
-  //   2
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Zam Wesell', 54),
-  // [ // films
-  //   2
-  // ],
-  // 'vehicles': [
-  //   'http://swapi.co/api/vehicles/45/'
-  // ],
-  // 'starships': [],
-  new Person(0, 'Dexter Jettster', 55),
-  // [ // films
-  //   2
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Lama Su', 10),
-  // [ // films
-  //   2
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Taun We', 10),
-  // [ // films
-  //   2
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Jocasta Nu', 9),
-  // [ // films
-  //   2
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Ratts Tyerell', 38),
-  // [ // films
-  //   1
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'R4-P17', 28),
-  // [ // films
-  //   2,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Wat Tambor', 56),
-  // [ // films
-  //   2
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'San Hill', 57),
-  // [ // films
-  //   2
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Shaak Ti', 58),
-  // [ // films
-  //   2,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Grievous', 59),
-  // [ // films
-  //   3
-  // ],
-  // 'vehicles': [
-  //   'http://swapi.co/api/vehicles/60/'
-  // ],
-  // // 'starships': [
-  //   'http://swapi.co/api/starships/74/'
-  // ],
-  new Person(0, 'Tarfful', 14),
-  // [ // films
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Raymus Antilles', 2),
-  // [ // films
-  //   3,
-  //   4
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Sly Moore', 60),
-  // [ // films
-  //   2,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Tion Medon', 12),
-  // [ // films
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Finn', 28),
-  // [ // films
-  //   7
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Rey', 28),
-  // [ // films
-  //   7
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Poe Dameron', 28),
-  // [ // films
-  //   7
-  // ],
-  // 'vehicles': [],
-  // 'starships': [
-  //   'http://swapi.co/api/starships/77/'
-  // ],
-  new Person(0, 'BB8', 28),
-  // [ // films
-  //   7
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Captain Phasma', 28),
-  // [ // films
-  //   7
-  // ],
-  // 'vehicles': [],
-  // 'starships': [],
-  new Person(0, 'Padmé Amidala', 8),
-  // [ // films
-  //   2,
-  //   1,
-  //   3
-  // ],
-  // 'vehicles': [],
-  // 'starships': [
-  //   'http://swapi.co/api/starships/49/',
-  //   'http://swapi.co/api/starships/64/',
-  //   'http://swapi.co/api/starships/39/'
-  // ],
+  new Person(1, 'Luke Skywalker', 1),
+  new Person(2, 'C-3PO', 1),
+  new Person(3, 'R2-D2', 8),
+  new Person(4, 'Darth Vader', 1),
+  new Person(5, 'Leia Organa', 2),
+  new Person(6, 'Owen Lars', 1),
+  new Person(7, 'Beru Whitesun lars', 1),
+  new Person(8, 'R5-D4', 1),
+  new Person(9, 'Biggs Darklighter', 1),
+  new Person(10, 'Obi-Wan Kenobi', 20),
+  new Person(11, 'Anakin Skywalker', 1),
+  new Person(12, 'Wilhuff Tarkin', 21),
+  new Person(13, 'Chewbacca', 14),
+  new Person(14, 'Han Solo', 22),
+  new Person(15, 'Greedo', 23),
+  new Person(16, 'Jabba Desilijic Tiure', 24),
+  new Person(17, 'Wedge Antilles', 22),
+  new Person(18, 'Jek Tono Porkins', 26),
+  new Person(19, 'Yoda', 28),
+  new Person(20, 'Palpatine', 8),
+  new Person(21, 'Boba Fett', 10),
+  new Person(22, 'IG-88', 28),
+  new Person(23, 'Bossk', 29),
+  new Person(24, 'Lando Calrissian', 30),
+  new Person(25, 'Lobot', 6),
+  new Person(26, 'Ackbar', 31),
+  new Person(27, 'Mon Mothma', 32),
+  new Person(28, 'Arvel Crynyd', 28),
+  new Person(29, 'Wicket Systri Warrick', 7),
+  new Person(30, 'Nien Nunb', 33),
+  new Person(31, 'Qui-Gon Jinn', 28),
+  new Person(32, 'Nute Gunray', 18),
+  new Person(33, 'Finis Valorum', 9),
+  new Person(34, 'Jar Jar Binks', 8),
+  new Person(35, 'Roos Tarpals', 8),
+  new Person(36, 'Rugor Nass', 8),
+  new Person(37, 'Ric Olié', 8),
+  new Person(38, 'Watto', 34),
+  new Person(39, 'Sebulba', 35),
+  new Person(40, 'Quarsh Panaka', 8),
+  new Person(41, 'Shmi Skywalker', 1),
+  new Person(42, 'Darth Maul', 36),
+  new Person(43, 'Bib Fortuna', 37),
+  new Person(44, 'Ayla Secura', 37),
+  new Person(45, 'Dud Bolt', 39),
+  new Person(46, 'Gasgano', 40),
+  new Person(47, 'Ben Quadinaros', 41),
+  new Person(48, 'Mace Windu', 42),
+  new Person(49, 'Ki-Adi-Mundi', 43),
+  new Person(50, 'Kit Fisto', 44),
+  new Person(51, 'Eeth Koth', 45),
+  new Person(52, 'Adi Gallia', 9),
+  new Person(53, 'Saesee Tiin', 47),
+  new Person(54, 'Yarael Poof', 48),
+  new Person(55, 'Plo Koon', 49),
+  new Person(56, 'Mas Amedda', 50),
+  new Person(57, 'Gregar Typho', 8),
+  new Person(58, 'Cordé', 8),
+  new Person(59, 'Cliegg Lars', 1),
+  new Person(60, 'Poggle the Lesser', 11),
+  new Person(61, 'Luminara Unduli', 51),
+  new Person(62, 'Barriss Offee', 51),
+  new Person(63, 'Dormé', 8),
+  new Person(64, 'Dooku', 52),
+  new Person(65, 'Bail Prestor Organa', 2),
+  new Person(66, 'Jango Fett', 53),
+  new Person(67, 'Zam Wesell', 54),
+  new Person(68, 'Dexter Jettster', 55),
+  new Person(69, 'Lama Su', 10),
+  new Person(70, 'Taun We', 10),
+  new Person(71, 'Jocasta Nu', 9),
+  new Person(72, 'Ratts Tyerell', 38),
+  new Person(73, 'R4-P17', 28),
+  new Person(74, 'Wat Tambor', 56),
+  new Person(75, 'San Hill', 57),
+  new Person(76, 'Shaak Ti', 58),
+  new Person(77, 'Grievous', 59),
+  new Person(78, 'Tarfful', 14),
+  new Person(79, 'Raymus Antilles', 2),
+  new Person(80, 'Sly Moore', 60),
+  new Person(81, 'Tion Medon', 12),
+  new Person(82, 'Finn', 28),
+  new Person(83, 'Rey', 28),
+  new Person(84, 'Poe Dameron', 28),
+  new Person(85, 'BB8', 28),
+  new Person(86, 'Captain Phasma', 28),
+  new Person(87, 'Padmé Amidala', 8),
 
   new Person(101, 'K-2S0', 39),
   new Person(102, 'Jyn Erso', 101),
