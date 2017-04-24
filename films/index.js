@@ -1,4 +1,4 @@
-module.exports = function (context, request) {
+module.exports = function (context, request, id) {
   context.log('JavaScript HTTP trigger function processed a request.');
   context.log('Bindings', context.bindings);
   context.log('Request', request);
@@ -8,8 +8,9 @@ module.exports = function (context, request) {
   let data = filmService.getFilms();
   let response = {};
 
-  if (request.query && request.query.id) {
-    const id = parseInt(request.query.id);
+  // if (request.query && request.query.id) {
+  if (id) {
+    // const id = parseInt(request.query.id);
     const film = filters.getMatch(data.results, id);
     response = {
       body: film
