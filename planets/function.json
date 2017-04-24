@@ -4,10 +4,9 @@
       "authLevel": "anonymous",
       "type": "httpTrigger",
       "direction": "in",
-      "methods": [
-        "get"
-      ],
-      "name": "request"
+      "methods": [ "get" ],
+      "name": "request",
+      "route": "planets/{id:int?}"
     },
     {
       "type": "http",

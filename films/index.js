@@ -10,9 +10,7 @@ module.exports = function (context, request) {
   let data = filmService.getFilms();
   let response = {};
 
-  // if (request.query && request.query.id) {
   if (id) {
-    // const id = parseInt(request.query.id);
     const film = filters.getMatch(data.results, id);
     response = {
       body: film

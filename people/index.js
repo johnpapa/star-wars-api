@@ -3,13 +3,14 @@ module.exports = function (context, request) {
   context.log('Bindings', context.bindings);
   context.log('Request', request);
 
+  const id = parseInt(context.bindingData.id);
+
   let peopleService = require('../services/people');
   let filters = require('../services/filters');
   let data = peopleService.getPeople();
   let response = {};
 
-  if (request.query && request.query.id) {
-    const id = parseInt(request.query.id);
+  if (id) {
     const person = filters.getMatch(data.results, id);
     response = {
       body: person
