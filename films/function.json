@@ -7,7 +7,8 @@
       "methods": [
         "get"
       ],
-      "name": "request"
+      "name": "request",
+      "route": "films/{id:long}"
     },
     {
       "type": "http",
