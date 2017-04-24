@@ -1,7 +1,9 @@
-module.exports = function (context, request, id) {
+module.exports = function (context, request) {
   context.log('JavaScript HTTP trigger function processed a request.');
   context.log('Bindings', context.bindings);
   context.log('Request', request);
+
+  const id = context.bindingData.id;
 
   let filmService = require('../services/films');
   let filters = require('../services/filters');
