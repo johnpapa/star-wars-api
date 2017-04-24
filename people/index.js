@@ -6,12 +6,11 @@ module.exports = function (context, request) {
   let peopleService = require('../services/people');
   let filters = require('../services/filters');
   let data = peopleService.getPeople();
-  let people = data.results;
   let response = {};
 
   if (request.query && request.query.id) {
     const id = parseInt(request.query.id);
-    const person = filters.getMatch(people, id);
+    const person = filters.getMatch(data.results, id);
     response = {
       body: person
     };

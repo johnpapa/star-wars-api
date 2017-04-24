@@ -6,12 +6,11 @@ module.exports = function (context, request) {
   let filmService = require('../services/films');
   let filters = require('../services/filters');
   let data = filmService.getFilms();
-  let films = data.results;
   let response = {};
 
   if (request.query && request.query.id) {
     const id = parseInt(request.query.id);
-    const film = filters.getMatch(films, id);
+    const film = filters.getMatch(data.results, id);
     response = {
       body: film
     };

@@ -6,12 +6,11 @@ module.exports = function (context, request) {
   let planetService = require('../services/planets');
   let filters = require('../services/filters');
   let data = planetService.getPlanets();
-  let planets = data.results;
   let response = {};
 
   if (request.query && request.query.id) {
     const id = parseInt(request.query.id);
-    const planet = filters.getMatch(planets, id);
+    const planet = filters.getMatch(data.results, id);
     response = {
       body: planet
     };
