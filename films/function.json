@@ -4,11 +4,9 @@
       "authLevel": "anonymous",
       "type": "httpTrigger",
       "direction": "in",
-      "methods": [
-        "get"
-      ],
+      "methods": [ "get" ],
       "name": "request",
-      "route": "films/{id:int?}"
+      "route": "films/{id:int}"
     },
     {
       "type": "http",
