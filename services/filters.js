@@ -2,7 +2,7 @@ module.exports = {
   getMatch: getMatch
 };
 
-function getMatch(list, id) {
+function getMatch(context, list, id) {
   context.log(list);
   context.log(id);
   const matches = list.filter(item => item.id === id);
