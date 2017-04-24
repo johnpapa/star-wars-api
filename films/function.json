@@ -6,7 +6,7 @@
       "direction": "in",
       "methods": [ "get" ],
       "name": "request",
-      "route": "films/{id:int}"
+      "route": "films/{id}"
     },
     {
       "type": "http",
