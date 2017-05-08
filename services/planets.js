@@ -387,6 +387,8 @@ const planets = [
   new Planet(104, 'Jedha'),
   new Planet(105, 'Grange'),
   new Planet(106, 'Aria Prime'),
+  new Planet(107, 'Lexrul'),
+  new Planet(108, 'Arkanis'),
 
 ];
 
