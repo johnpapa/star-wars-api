@@ -5,17 +5,13 @@ module.exports = {
   getAllegiances: getAllegiances
 }
 
-const allegiance = [
+const allegiances = [
   'rebel',
   'imperial',
   'sith',
   'jedi',
   'bounty hunter'
 ];
-
-function getAllegiances() {
-  return allegiance;
-}
 
 const people = [
   new Person(1, 'Luke Skywalker', 1, 'jedi'),
@@ -115,18 +111,22 @@ const people = [
   new Person(107, 'Bodhi Rook', 104, 'rebel'),
   new Person(108, 'Galen Erso', 105, 'rebel'),
   new Person(109, 'Lyra Erso', 106, 'rebel')
-  new Person(110, 'Orson Krennic', 106, 'imperial')
+  new Person(110, 'Orson Krennic', 107, 'imperial')
   new Person(111, 'Kylo Ren', 32, 'imperial')
-  new Person(112, 'Armitage Hux',108, 'imperial')
+  new Person(112, 'Armitage Hux', 108, 'imperial')
   new Person(113, 'Snoke', 28, 'imperial')
-
 ];
 
-const data = {
-  count: people.length,
-  results: people
-};
+function getAllegiances() {
+  return {
+    count: allegiances.length,
+    results: allegiances
+  };
+}
 
 function getPeople() {
-  return data;
+  return {
+    count: people.length,
+    results: people
+  };
 }
