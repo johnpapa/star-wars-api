@@ -110,10 +110,10 @@ const people = [
   new Person(106, 'Baze Malbus', 104, 'rebel'),
   new Person(107, 'Bodhi Rook', 104, 'rebel'),
   new Person(108, 'Galen Erso', 105, 'rebel'),
-  new Person(109, 'Lyra Erso', 106, 'rebel')
-  new Person(110, 'Orson Krennic', 107, 'imperial')
-  new Person(111, 'Kylo Ren', 32, 'imperial')
-  new Person(112, 'Armitage Hux', 108, 'imperial')
+  new Person(109, 'Lyra Erso', 106, 'rebel'),
+  new Person(110, 'Orson Krennic', 107, 'imperial'),
+  new Person(111, 'Kylo Ren', 32, 'imperial'),
+  new Person(112, 'Armitage Hux', 108, 'imperial'),
   new Person(113, 'Snoke', 28, 'imperial')
 ];
 
