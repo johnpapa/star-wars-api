@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+        "swagger": {
+            "matchCondition": {
+                "route": "swagger.json"
+            },
+            "backendUri": "https://starwars-api.azurewebsites.net/admin/host/swagger?code=JaCyg/cUFu9FpWFzvVPLJUS/eEmnpiBVaHuCEhfsa/vYjytYBy1Xhg=="
+        }
+    }
+}
