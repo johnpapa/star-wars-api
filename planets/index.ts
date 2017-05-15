@@ -9,10 +9,10 @@ export async function run(context, request) {
 
   const id = parseInt(context.bindingData.id);
 
-  let body: string | {};
+  let body: any; // string | {};
   let status = 200;
   let data = getPlanets();
-  let response = {};
+  let response: {body: string, status: number};
 
   if (id) {
     const planet = getMatch(data.results, id);
@@ -22,7 +22,7 @@ export async function run(context, request) {
     body = data;
   }
 
-  context.res = {
+  response = {
     body: body,
     status: status
   };
