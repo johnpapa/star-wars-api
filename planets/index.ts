@@ -9,7 +9,7 @@ export async function run(context, request) {
 
   const id = parseInt(context.bindingData.id);
 
-  let body: string | object;
+  let body: string | {};
   let status = 200;
   let data = getPlanets();
   let response = {};
