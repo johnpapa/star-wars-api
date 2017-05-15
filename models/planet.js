@@ -1,4 +1,3 @@
-module.exports = function (id, name) {
-  this.id = id;
-  this.name = name;
+export class Planet {
+  constructor(public id: number, public name: string) { }
 }

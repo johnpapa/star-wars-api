@@ -1,8 +1,4 @@
-const Planet = require('../models/planet');
-
-module.exports = {
-  getPlanets: getPlanets
-}
+import { Planet } from '../models/planet';
 
 const planets = [
   new Planet(1, 'Tatooine'),
@@ -392,11 +388,9 @@ const planets = [
 
 ];
 
-const data = {
-  count: planets.length,
-  results: planets
-};
-
-function getPlanets() {
-  return data;
+export function getPlanets() {
+  return {
+    count: planets.length,
+    results: planets
+  };
 }
