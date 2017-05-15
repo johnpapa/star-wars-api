@@ -10,7 +10,7 @@ Star Wars API
 
 Login
 ```
-as login
+az login
 ```
 
 Create a place to logicalluy store everything (resource group)
