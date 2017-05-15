@@ -27,5 +27,6 @@ export async function run(context, request) {
     status: status
   };
 
-  context.done(null, response);
+  return response;
+  // context.done(null, response);
 };
