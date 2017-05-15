@@ -1,6 +1,6 @@
+import { getPlanets } from '../services/planets';
+import { getMatch } from '../services/filters';
 export async function run(context, request) {
-  import { planetService } from '../services/planets';
-  import { filters } from '../services/filters';
 
   context.log('JavaScript HTTP trigger function processed a request.');
   context.log('Bindings', context.bindings);
@@ -8,13 +8,13 @@ export async function run(context, request) {
 
   const id = parseInt(context.bindingData.id);
 
-  let body: string;
+  let body: string | object;
   let status = 200;
-  let data = planetService.getPlanets();
+  let data = getPlanets();
   let response = {};
 
   if (id) {
-    const planet = filters.getMatch(data.results, id);
+    const planet = getMatch(data.results, id);
     body = planet;
   }
   else {
