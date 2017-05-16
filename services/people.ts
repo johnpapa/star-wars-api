@@ -1,9 +1,4 @@
-const Person = require('../models/person');
-
-module.exports = {
-  getPeople: getPeople,
-  getAllegiances: getAllegiances
-}
+import { Person } from '../models/person';
 
 const allegiances = [
   'rebel',
@@ -117,14 +112,14 @@ const people = [
   new Person(113, 'Snoke', 28, 'imperial')
 ];
 
-function getAllegiances() {
+export function getAllegiances() {
   return {
     count: allegiances.length,
     results: allegiances
   };
 }
 
-function getPeople() {
+export function getPeople() {
   return {
     count: people.length,
     results: people

@@ -1,4 +1,4 @@
-import { getPlanets } from '../services/planets';
+import { getFilms } from '../services/films';
 import { getMatch } from '../services/filters';
 
 export async function run(context, request) {
@@ -10,21 +10,21 @@ export async function run(context, request) {
 
   let body: string | {};
   let status = 200;
-  let data = getPlanets();
-  let response: { body: string | {}, status: number};
+  let data = getFilms();
+  let response = {};
 
   if (id) {
-    const planet = getMatch(data.results, id);
-    body = planet;
+    const film = getMatch(data.results, id);
+    body = film;
   }
   else {
     body = data;
   }
 
   response = {
-    body: body,
-    status: status
-  };
+    body,
+    status
+  }
 
   return response;
 };

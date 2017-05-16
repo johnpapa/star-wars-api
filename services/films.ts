@@ -1,8 +1,4 @@
-const Film = require('../models/film');
-
-module.exports = {
-  getFilms: getFilms
-}
+import { Film } from '../models/film';
 
 const films = [
   new Film(1, 'The Phantom Menace'),
@@ -21,6 +17,6 @@ const data = {
   results: films
 };
 
-function getFilms() {
+export function getFilms() {
   return data;
 }
