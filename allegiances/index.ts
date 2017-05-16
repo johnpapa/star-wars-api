@@ -1,4 +1,4 @@
-import { getAllegiances } from './../src/services/people';
+import { getAllegiances } from '../src/services/people';
 
 export async function run(context, request) {
   context.log('JavaScript HTTP trigger function processed a request.');
