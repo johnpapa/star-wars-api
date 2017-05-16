@@ -4,7 +4,9 @@
       "authLevel": "anonymous",
       "type": "httpTrigger",
       "direction": "in",
-      "methods": [ "get" ],
+      "methods": [
+        "get"
+      ],
       "name": "request",
       "route": "people/{id:int?}"
     },
@@ -14,5 +16,6 @@
       "name": "$return"
     }
   ],
-  "disabled": false
+  "disabled": false,
+  "scriptFile": "../api/people.ts"
 }

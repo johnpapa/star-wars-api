@@ -1,25 +1,14 @@
-import { getFilms } from '../src/api/services/films';
-import { getMatch } from '../src/api/services/filters';
+import { getAllegiances } from './services/people';
 
 export async function run(context, request) {
   context.log('JavaScript HTTP trigger function processed a request.');
   context.log('Bindings', context.bindings);
   context.log('Request', request);
 
-  const id = parseInt(context.bindingData.id);
-
   let body: string | {};
   let status = 200;
-  let data = getFilms();
+  let data = getAllegiances();
   let response = {};
-
-  if (id) {
-    const film = getMatch(data.results, id);
-    body = film;
-  }
-  else {
-    body = data;
-  }
 
   response = {
     body,

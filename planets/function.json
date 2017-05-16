@@ -4,7 +4,9 @@
       "authLevel": "anonymous",
       "type": "httpTrigger",
       "direction": "in",
-      "methods": [ "get" ],
+      "methods": [
+        "get"
+      ],
       "name": "request",
       "route": "planets/{id:int?}"
     },
@@ -15,5 +17,5 @@
     }
   ],
   "disabled": false,
-  "scriptFile": "../src/api/planets.ts"
+  "scriptFile": "../api/planets.ts"
 }
