@@ -1,5 +1,5 @@
-import { getFilms } from '../services/films';
-import { getMatch } from '../services/filters';
+import { getFilms } from '../../services/films';
+import { getMatch } from '../../services/filters';
 
 export async function run(context, request) {
   context.log('JavaScript HTTP trigger function processed a request.');
@@ -26,5 +26,5 @@ export async function run(context, request) {
     status
   }
 
-  return response;
+  return context.done(null, response);
 };

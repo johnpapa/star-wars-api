@@ -1,5 +1,5 @@
-import { getPeople } from '../services/people';
-import { getMatch } from '../services/filters';
+import { getPlanets } from '../../services/planets';
+import { getMatch } from '../../services/filters';
 
 export async function run(context, request) {
   context.log('JavaScript HTTP trigger function processed a request.');
@@ -10,21 +10,21 @@ export async function run(context, request) {
 
   let body: string | {};
   let status = 200;
-  let data = getPeople();
-  let response = {};
+  let data = getPlanets();
+  let response: { body: string | {}, status: number};
 
   if (id) {
-    const person = getMatch(data.results, id);
-    body = person
+    const planet = getMatch(data.results, id);
+    body = planet;
   }
   else {
     body = data;
   }
 
   response = {
-    body,
-    status
-  }
+    body: body,
+    status: status
+  };
 
-  return response;
+  return context.done(null, response);
 };

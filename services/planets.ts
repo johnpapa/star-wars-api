@@ -71,7 +71,6 @@ const planets = [
   new Planet(106, 'Aria Prime'),
   new Planet(107, 'Lexrul'),
   new Planet(108, 'Arkanis'),
-
 ];
 
 export function getPlanets() {

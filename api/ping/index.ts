@@ -11,5 +11,5 @@ export async function run(context, request) {
     status: status
   };
 
-  return response;
+  return context.done(null, response);
 };
