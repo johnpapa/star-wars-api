@@ -14,5 +14,6 @@
       "name": "$return"
     }
   ],
-  "disabled": false
+  "disabled": false,
+  "scriptFile": "../src/api/ping"
 }
