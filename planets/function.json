@@ -15,5 +15,5 @@
     }
   ],
   "disabled": false,
-  "scriptFile": "/src/api/planets/index.js"
+  "scriptFile": "../src/api/planets/index.js"
 }
