@@ -15,5 +15,5 @@
     }
   ],
   "disabled": false,
-  "scriptFile": "../src/api/allegiance"
+  "scriptFile": "../src/api/allegiance/index.ts"
 }

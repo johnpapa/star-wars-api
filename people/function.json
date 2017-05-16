@@ -15,5 +15,5 @@
     }
   ],
   "disabled": false,
-  "scriptFile": "../src/api/people"
+  "scriptFile": "../src/api/people/index.ts"
 }
