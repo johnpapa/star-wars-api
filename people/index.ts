@@ -1,5 +1,5 @@
-import { getFilms } from '../../services/films';
-import { getMatch } from '../../services/filters';
+import { getPeople } from '../src/services/people';
+import { getMatch } from '../src/services/filters';
 
 export async function run(context, request) {
   context.log('JavaScript HTTP trigger function processed a request.');
@@ -10,12 +10,12 @@ export async function run(context, request) {
 
   let body: string | {};
   let status = 200;
-  let data = getFilms();
+  let data = getPeople();
   let response = {};
 
   if (id) {
-    const film = getMatch(data.results, id);
-    body = film;
+    const person = getMatch(data.results, id);
+    body = person
   }
   else {
     body = data;
