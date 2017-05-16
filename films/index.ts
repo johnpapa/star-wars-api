@@ -1,5 +1,5 @@
-import { getFilms } from '../src/services/films';
-import { getMatch } from '../src/services/filters';
+import { getFilms } from '../src/api/services/films';
+import { getMatch } from '../src/api/services/filters';
 
 export async function run(context, request) {
   context.log('JavaScript HTTP trigger function processed a request.');
