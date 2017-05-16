@@ -15,5 +15,5 @@
     }
   ],
   "disabled": false,
-  "scriptFile": "../src/api/planets/index.ts"
+  "scriptFile": "../src/api/planets.ts"
 }
