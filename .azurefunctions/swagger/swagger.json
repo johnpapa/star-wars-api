@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
-  title: starwars-api.azurewebsites.net
+  title: papa-starwars-api.azurewebsites.net
   version: 1.0.0
-host: starwars-api.azurewebsites.net
+host: papa-starwars-api.azurewebsites.net
 basePath: /
 schemes:
   - https
