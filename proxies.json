@@ -11,7 +11,7 @@
             "matchCondition": {
                 "route": "/docs"
             },
-            "backendUri": "http://starwars-api-docs.azurewebsites.net"
+            "backendUri": "http://starwars-api-docs.azurewebsites.net/docs/"
         },
         "swagger-landing-docs-rest": {
             "matchCondition": {
