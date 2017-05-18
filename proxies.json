@@ -6,6 +6,12 @@
                 "route": "swagger.json"
             },
             "backendUri": "https://papa-starwars-api.azurewebsites.net/admin/host/swagger?code=muT8yvuJUGGzO/1yiNsSPQasde3BNMVOswzHV3RQfrcAfqkbT2atZA=="
+        },
+        "swagger-landing": {
+            "matchCondition": {
+                "route": "/"
+            },
+            "backendUri": "http://starwars-api-docs.azurewebsites.net"
         }
     }
 }
