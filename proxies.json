@@ -7,7 +7,13 @@
             },
             "backendUri": "https://papa-starwars-api.azurewebsites.net/admin/host/swagger?code=muT8yvuJUGGzO/1yiNsSPQasde3BNMVOswzHV3RQfrcAfqkbT2atZA=="
         },
-        "swagger-landing": {
+        "swagger-landing-docs": {
+            "matchCondition": {
+                "route": "docs"
+            },
+            "backendUri": "http://starwars-api-docs.azurewebsites.net"
+        },
+        "swagger-landing-docs-rest": {
             "matchCondition": {
                 "route": "docs/{*rest}"
             },
