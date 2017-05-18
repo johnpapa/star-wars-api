@@ -29,9 +29,9 @@ paths:
       description: Get all films.
       responses:
         '200':
-          description: A film.
+          description: An array of films.
           schema:
-            type: object
+            type: array
             items:
               $ref: '#/definitions/film'
       security:
