@@ -1,6 +1,2 @@
 node_modules
 dist
-
-
-# ignore this for now, because the portal aint using it properly
-swagger.json
