@@ -11,7 +11,7 @@
             "matchCondition": {
                 "route": "docs/{*rest}"
             },
-            "backendUri": "http://starwars-api-docs.azurewebsites.net/{*rest}"
+            "backendUri": "http://starwars-api-docs.azurewebsites.net/{rest}"
         }
     }
 }
