@@ -4,8 +4,8 @@
       "name": "stayAliveTimer",
       "type": "timerTrigger",
       "direction": "in",
-      "schedule": "* */15 * * * *"
+      "schedule": "* */10 * * * *"
     }
   ],
-  "disabled": true
+  "disabled": false
 }
