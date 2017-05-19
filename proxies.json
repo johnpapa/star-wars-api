@@ -1,6 +1,18 @@
 {
     "$schema": "http://json.schemastore.org/proxies",
     "proxies": {
+        "one-with-angular-app": {
+            "matchCondition": {
+                "route": "demo"
+            },
+            "backendUri": "http://one-with-angular.azurewebsites.net"
+        },
+        "one-with-angular-app-rest": {
+            "matchCondition": {
+                "route": "demo/{*rest}"
+            },
+            "backendUri": "http://one-with-angular.azurewebsites.net/{rest}"
+        },
         "swagger": {
             "matchCondition": {
                 "route": "swagger.json"
