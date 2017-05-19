@@ -1,0 +1,11 @@
+{
+  "bindings": [
+    {
+      "name": "stayAliveTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "* */15 * * * *"
+    }
+  ],
+  "disabled": true
+}
