@@ -1,4 +1,5 @@
 module.exports = function (context, request) {
+
   context.log('JavaScript HTTP trigger function processed a request.');
   context.log('Bindings', context.bindings);
   context.log('Request', request);
