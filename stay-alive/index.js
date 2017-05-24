@@ -5,6 +5,6 @@ module.exports = function (context, stayAliveTimer) {
     {
         context.log('Timer is past due!');
     }
-    context.log('JavaScript timer trigger function ran!', timeStamp);\
+    context.log('JavaScript timer trigger function ran!', timeStamp);
     context.done();
 };
