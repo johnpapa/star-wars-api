@@ -2,7 +2,7 @@ import { getFilms } from './services/films';
 import { getMatch } from './services/filters';
 
 export async function run(context, request) {
-  context.log('JavaScript HTTP trigger function processed a request.');
+  context.log('TypeScript HTTP trigger function processed a request.');
   context.log('Bindings', context.bindings);
   context.log('Request', request);
 
