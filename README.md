@@ -7,7 +7,7 @@ Star Wars API
 
 ## Azure CLI
 
-[Install the Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?WT.mc_id=starwarsapi-github-jopapa)
+[Install the Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?WT.mc_id=starwarsapi-github-shboyer)
 
 Login
 
